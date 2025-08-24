@@ -1,0 +1,187 @@
+/* ===============================
+   Isla del Código - Tema Aventura
+   =============================== */
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --marron: #795548;
+  --arena: #fff3e0;
+  --naranja: #ff9800;
+  --naranja-oscuro: #e65100;
+  --azul-prof: rgba(0, 51, 102, 0.9);
+  --oro: #ffeb3b;
+  --verde-correcto: #2e7d32;
+  --rojo-error: #c62828;
+}
+
+*{box-sizing:border-box;}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=60') no-repeat center center fixed;
+  background-size: cover;
+  color: #3e2723;
+  margin: 0;
+  padding: 0;
+  line-height:1.5;
+}
+
+header {
+  background-color: var(--azul-prof);
+  color: var(--oro);
+  padding: 1.5em 1em;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  font-family: 'Pirata One', cursive;
+  font-size: 2.2rem;
+  margin:0 0 .25em 0;
+  text-shadow: 1px 1px 2px black;
+}
+
+header p {
+  margin:.25em 0;
+  font-size:1rem;
+}
+
+main {
+  width:100%;
+}
+
+section.contenido {
+  background-color: rgba(255, 255, 255, 0.97);
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 15px;
+  max-width: 900px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+section.contenido h2 {
+  margin-top:0;
+  text-shadow: 1px 1px 2px #fffde7;
+  font-family:'Pirata One',cursive;
+  letter-spacing:.5px;
+}
+
+.activity-block{
+  margin-bottom:2.5em;
+  border:2px solid var(--marron);
+  padding:1.5em;
+  border-radius:12px;
+  background-color:var(--arena);
+  position:relative;
+}
+
+.activity-block.correct{
+  border-color:var(--verde-correcto);
+}
+.activity-block.incorrect{
+  border-color:var(--rojo-error);
+}
+
+.activity-block h3{
+  margin-top:0;
+  font-family:'Pirata One',cursive;
+  font-size:1.4rem;
+}
+
+textarea, input[type="text"], input[type="number"] {
+  width: 100%;
+  font-family: monospace;
+  padding: 1em;
+  border-radius: 10px;
+  border: 2px solid var(--marron);
+  margin-bottom: 1em;
+  background-color: #ffffff;
+}
+
+select{
+  font-family:monospace;
+  padding:.25em .5em;
+  margin:0 .25em;
+  border-radius:6px;
+  border:2px solid var(--marron);
+  background:white;
+}
+
+button {
+  background-color: var(--naranja);
+  color: white;
+  padding: 0.6em 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--naranja-oscuro);
+}
+
+.feedback{
+  margin-top:.5em;
+  font-weight:bold;
+}
+
+.feedback.ok{color:var(--verde-correcto);}
+.feedback.err{color:var(--rojo-error);}
+
+pre {
+  background: #ffe0b2;
+  padding: 1em;
+  border-left: 5px solid var(--naranja);
+  white-space: pre-wrap;
+  max-height:300px;
+  overflow-y:auto;
+}
+
+#hud{
+  position:sticky;
+  top:0;
+  z-index:10;
+  width:100%;
+  background:var(--azul-prof);
+  color:white;
+  padding:.5em 1em;
+  font-size:1.1rem;
+  display:flex;
+  justify-content:center;
+  gap:2em;
+  align-items:center;
+  box-shadow:0 2px 4px rgba(0,0,0,.4);
+}
+
+#nivel-progress{
+  flex:1;
+  max-width:300px;
+  height:12px;
+  background:rgba(255,255,255,.2);
+  border-radius:6px;
+  overflow:hidden;
+  position:relative;
+}
+#nivel-progress-bar{
+  height:100%;
+  width:0%;
+  background:var(--oro);
+  transition:width .3s ease;
+}
+
+footer {
+  background-color: var(--azul-prof);
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+  font-size:.9rem;
+}
+
+footer a{
+  color:var(--oro);
+  text-decoration:underline;
+}
