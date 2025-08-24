@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Isla del Código: Desafío Condicional</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🏝️ Isla del Código: Desafío Condicional</h1>
+    <p><strong>Público objetivo:</strong> Estudiantes de nivel medio (13 a 16 años)</p>
+    <p><strong>Conocimientos previos:</strong> Variables y operadores básicos en JavaScript.</p>
+  </header>
+
+  <!-- HUD gamificado -->
+  <div id="hud">
+    <div>🏆 Puntos: <span id="puntos">0</span></div>
+    <div>⭐ Nivel: <span id="nivel">1</span></div>
+    <div id="nivel-progress"><div id="nivel-progress-bar"></div></div>
+  </div>
+
+  <main>
+    <section class="contenido" id="intro">
+      <h2>🎯 Objetivo de aprendizaje</h2>
+      <p>Comprender y aplicar estructuras condicionales simples, con <code>if</code>, <code>else</code> y <code>else if</code>, incluyendo operadores lógicos en JavaScript.</p>
+
+      <h2>📖 Narrativa</h2>
+      <p>Eres un/a explorador/a que naufragó en la <strong>Isla del Código</strong>. Para construir una señal de auxilio y encontrar el Tesoro del Saber, deberás superar misiones resolviendo condicionales.</p>
+    </section>
+
+    <!-- Actividad 0: Completar estructura de condicional -->
+    <section class="contenido activity-block" id="actividad0">
+      <h2>⛏️ Actividad 0: Completa la Estructura de un Condicional</h2>
+      <p>Selecciona las piezas correctas para formar un condicional que compare una variable <code>puntaje</code> con 10 y muestre un mensaje.</p>
+      <div id="fill-blanks">
+        <code>
+          <span>let puntaje = 12;</span><br>
+          <span>
+            <select id="fb1">
+              <option value="">--elige--</option>
+              <option value="if">if</option>
+              <option value="for">for</option>
+              <option value="while">while</option>
+            </select>
+            (
+            <select id="fb2">
+              <option value="">--elige--</option>
+              <option value="puntaje > 10">puntaje > 10</option>
+              <option value="puntaje = 10">puntaje = 10</option>
+              <option value="puntaje++">puntaje++</option>
+            </select>
+            ) {
+          </span><br>
+          &nbsp;&nbsp;<span>console.log("¡Superaste la marca!");</span><br>
+          } <select id="fb3">
+              <option value="">--elige--</option>
+              <option value="else">else</option>
+              <option value="then">then</option>
+              <option value="end">end</option>
+            </select> {<br>
+          &nbsp;&nbsp;console.log("Sigue intentando...");<br>
+          }<br>
+        </code>
+      </div>
+      <button type="button" onclick="verificarActividad0()">Verificar</button>
+      <div id="feedback0" class="feedback"></div>
+    </section>
+
+    <!-- Desafío 1 -->
+    <section class="contenido activity-block" id="desafio1">
+      <h2>🎮 Desafío 1: Edad para Votar</h2>
+      <p>Pide la edad con <code>prompt()</code> y usa <code>if/else</code> para decir si puede votar (>=18) o no.</p>
+      <textarea id="codigo1" placeholder="Escribe tu código aquí..."></textarea>
+      <button type="button" onclick="verificarDesafio1()">Verificar Desafío 1</button>
+      <pre id="resultado1"></pre>
+    </section>
+
+    <!-- Desafío 2 -->
+    <section class="contenido activity-block" id="desafio2">
+      <h2>🎮 Desafío 2: Número Par o Impar</h2>
+      <p>Pide un número y usa <code>%</code> para saber si es par (<code>num % 2 === 0</code>) o impar.</p>
+      <textarea id="codigo2" placeholder="Escribe tu código aquí..."></textarea>
+      <button type="button" onclick="verificarDesafio2()">Verificar Desafío 2</button>
+      <pre id="resultado2"></pre>
+    </section>
+
+    <!-- Desafío 3 -->
+    <section class="contenido activity-block" id="desafio3">
+      <h2>🌡️ Desafío 3: Clasificador de Temperatura</h2>
+      <p>Pide una temperatura en °C. Si &lt; 10 → "Frío", si &lt; 25 → "Templado", si no → "Calor". Usa <code>if / else if / else</code>.</p>
+      <textarea id="codigo3" placeholder="Escribe tu código aquí..."></textarea>
+      <button type="button" onclick="verificarDesafio3()">Verificar Desafío 3</button>
+      <pre id="resultado3"></pre>
+    </section>
+
+    <!-- Desafío 4 -->
+    <section class="contenido activity-block" id="desafio4">
+      <h2>🗝️ Desafío 4: Cofre Protegido</h2>
+      <p>Hay 3 condiciones booleanas: <code>tieneMapa</code>, <code>tieneLlave</code>, <code>codigoCorrecto</code>. Abre el cofre si <em>tieneMapa && tieneLlave && codigoCorrecto</em>. Si solo tieneMapa y tieneLlave pero no código, muestra "Falta el código secreto". Si no tieneLlave, muestra "No puedes abrir el cofre".</p>
+      <textarea id="codigo4" placeholder="Escribe tu código aquí..."></textarea>
+      <button type="button" onclick="verificarDesafio4()">Verificar Desafío 4</button>
+      <pre id="resultado4"></pre>
+    </section>
+
+    <!-- Video -->
+
+    <section class="contenido activity-block" id="video">
+      <h2>🎥 Video explicativo</h2>
+      <video width="560" height="315" controls>
+  <source src="video.mp4" type="video/mp4">
+  Tu navegador no soporta la reproducción de videos.
+</video>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>🔗 Licencia: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> | Creado por Patricia Perillo]</p>
+  </footer>
+</body>
+</html>
